@@ -1,28 +1,30 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<v-app>
+    <v-app-bar app dark prominent>
+        <v-img src="../src/assets/mercadoulogo.png" max-width="50px">
+
+        </v-img>
+        <v-text class="amber--text subtitle">Painel de testes - API Mail</v-text>
+    </v-app-bar>
+
+    <v-main>
+        <Sender />
+    </v-main>
+</v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Sender from './components/Sender'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
+    name: 'App',
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+    components: {
+        Sender
+    },
+
+    data: () => ({
+        //
+    }),
+};
+</script>
